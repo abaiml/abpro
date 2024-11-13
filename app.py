@@ -5,13 +5,9 @@ import cohere
 import streamlit as st
 import gdown
 import os
-from dotenv import load_dotenv
 
-# Load environment variables from the .env file
-load_dotenv()
-
-# Get the API key from the environment variables
-cohere_api_key = os.getenv("COHERE_API_KEY")
+# Retrieve the API key from Streamlit secrets
+cohere_api_key = st.secrets["COHERE_API_KEY"]
 
 # Initialize Cohere with the API key
 cohere_client = cohere.Client(cohere_api_key)
