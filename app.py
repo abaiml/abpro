@@ -13,7 +13,7 @@ cohere_api_key = st.secrets["COHERE_API_KEY"]
 cohere_client = cohere.Client(cohere_api_key)
 
 # Google Drive file ID (replace with your actual file ID)
-file_id = "1-3CLNH_nMQtvEtLRFiDV9_PFM-d9dYdX"  # Your actual file ID
+file_id = "1NFfdK_U5yQE1S4q8S4cezvhat9qyIFAx"  # Your actual file ID
 model_url = f"https://drive.google.com/uc?id={file_id}"
 
 # Path where model will be saved (persistent across sessions)
