@@ -28,25 +28,22 @@ def download_model():
 # Cache the model download to prevent multiple downloads
 @st.cache_resource
 def load_model():
-    # Ensure the model is downloaded once before loading it
-    download_model()
-    
-    # Load the checkpoint
-    checkpoint = torch.load(model_file_path, map_location=torch.device('cpu'))
-    
-    # Initialize the model architecture (AlexNet)
-    alexnet = models.alexnet(pretrained=False)
-    
-    # Modify the classifier to have 100 output classes (for CIFAR-100)
-    alexnet.classifier[6] = torch.nn.Linear(in_features=4096, out_features=100)
-    
-    # Load only the model weights (not the optimizer or epoch states)
-    model_state_dict = checkpoint['model_state_dict'] if 'model_state_dict' in checkpoint else checkpoint
-    alexnet.load_state_dict(model_state_dict)
-    
-    alexnet.eval()
-    return alexnet
-
+    try:
+        download_model()
+        checkpoint = torch.load(model_file_path, map_location=torch.device('cpu'))
+        
+        alexnet = models.alexnet(pretrained=False)
+        alexnet.classifier[6] = torch.nn.Linear(in_features=4096, out_features=100)
+        
+        model_state_dict = checkpoint.get('model_state_dict', checkpoint)
+        alexnet.load_state_dict(model_state_dict)
+        
+        alexnet.eval()
+        return alexnet
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
+        raise
+        
 # Load the model
 alexnet = load_model()
 
