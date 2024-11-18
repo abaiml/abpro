@@ -24,7 +24,7 @@ def download_model():
     if not os.path.exists(model_file_path):
         # Download the model only if it doesn't already exist locally
         gdown.download(model_url, model_file_path, quiet=False)
-'''
+
 # Cache the model download to prevent multiple downloads
 @st.cache_resource
 def load_model():
@@ -46,18 +46,7 @@ def load_model():
     
     alexnet.eval()
     return alexnet
-'''
-def load_model():
-    download_model()
-    checkpoint = torch.load(model_file_path, map_location=torch.device('cpu'))
-    
-    alexnet = models.alexnet(pretrained=False)
-    alexnet.classifier[6] = torch.nn.Linear(in_features=4096, out_features=100)
-    
-    model_state_dict = checkpoint.get('model_state_dict', checkpoint)
-    alexnet.load_state_dict(model_state_dict)
-    alexnet.eval()
-    return alexnet
+
 # Load the model
 alexnet = load_model()
 
