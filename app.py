@@ -88,7 +88,7 @@ def generate_text_cohere(prompt):
     return response.generations[0].text.strip()
 
 # Function to classify the image using AlexNet and return top N predictions
-def classify_image(image_tensor, top_n=3):
+def classify_image(image_tensor, top_n=5):
     with torch.no_grad():
         outputs = alexnet(image_tensor)
     
@@ -106,7 +106,7 @@ def classify_image(image_tensor, top_n=3):
 def process_and_generate_text(image):
     # Preprocess and classify the image
     image_tensor = preprocess_image(image)
-    top_labels, top_probs = classify_image(image_tensor, top_n=3)
+    top_labels, top_probs = classify_image(image_tensor, top_n=5)
     
     # Select the highest probability label as the final classification
     label_name = top_labels[0] 
