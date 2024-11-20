@@ -136,10 +136,10 @@ if uploaded_file is not None:
     st.subheader("Generated Description")
     st.write(f"**Detected as** :  {label_name}")
     
-    # Show the top 3 predictions and their probabilities 
-    st.write("**Top 3 Predicted Classes and Probabilities:**")
+    # Show the top 5 predictions and their probabilities 
+    st.write("**Top 5 Predicted Classes and Probabilities:**")
     top_predictions = ""
-    for i in range(3):
+    for i in range(5):
         top_predictions += f"{i+1}.**{top_labels[i]}** : {top_probs[i]*100:.2f}% {'&nbsp;' * 15} "
     
     # Use markdown to display side by side with enough space
