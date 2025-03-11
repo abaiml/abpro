@@ -22,8 +22,8 @@ Fine-Tuned-Image-Classifier/
 
 Clone the repository
 ```
-git clone https://github.com/yourusername/Fine-Tuned-Image-Classifier.git
-cd Fine-Tuned-Image-Classifier
+git clone https://github.com/abaiml/abpro.git
+cd abpro
 ```
 Create a virtual environment & activate it
 ```
