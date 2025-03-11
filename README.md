@@ -1,16 +1,16 @@
-## **📸 Fine-Tuned Image Classifier**
+## 📸 Fine-Tuned Image Classifier
 A fine-tuned AlexNet-based image classification model that enhances visual recognition and provides detailed contextual descriptions using Cohere AI.
 
-### **🚀 Features**
+### 🚀 Features
 
-- Fine-Tuned AlexNet Model: Optimized for CIFAR-100 dataset.
-- Image Classification: Classifies images into 100 categories.
-- Cohere AI Integration: Generates detailed descriptions of classified images.
-- Streamlit Interface: User-friendly UI for image upload and classification.
-- Optimized Performance: Transfer learning and hyperparameter tuning improve accuracy.
-- Google Drive Model Hosting: Efficient model loading via gdown.
+- **Fine-Tuned AlexNet Model**: Optimized for CIFAR-100 dataset.
+- **Image Classification**: Classifies images into 100 categories.
+- **Cohere AI Integration**: Generates detailed descriptions of classified images.
+- **Streamlit Interface**: User-friendly UI for image upload and classification.
+- **Optimized Performance**: Transfer learning and hyperparameter tuning improve accuracy.
+- **Google Drive Model Hosting**: Efficient model loading via gdown.
 
-### **📂 Project Structure**
+### 📂 Project Structure
 ```
 Fine-Tuned-Image-Classifier/
 │-- app.py                # Main Streamlit application
