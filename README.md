@@ -3,17 +3,12 @@ A fine-tuned AlexNet-based image classification model that enhances visual recog
 
 🚀 Features
 
-Fine-Tuned AlexNet Model: Optimized for CIFAR-100 dataset.
-
-Image Classification: Classifies images into 100 categories.
-
-Cohere AI Integration: Generates detailed descriptions of classified images.
-
-Streamlit Interface: User-friendly UI for image upload and classification.
-
-Optimized Performance: Transfer learning and hyperparameter tuning improve accuracy.
-
-Google Drive Model Hosting: Efficient model loading via gdown.
+- Fine-Tuned AlexNet Model: Optimized for CIFAR-100 dataset.
+- Image Classification: Classifies images into 100 categories.
+- Cohere AI Integration: Generates detailed descriptions of classified images.
+- Streamlit Interface: User-friendly UI for image upload and classification.
+- Optimized Performance: Transfer learning and hyperparameter tuning improve accuracy.
+- Google Drive Model Hosting: Efficient model loading via gdown.
 
 📂 Project Structure
 ```
@@ -54,23 +49,17 @@ COHERE_API_KEY = "your-cohere-api-key"
 ```
 🏗️ Model Details
 
-Pretrained Model: AlexNet
-
-Dataset: CIFAR-100
-
-Fine-Tuned for 100 Classes: Fruits, vegetables, animals, food items, etc.
-
-Model Downloaded from Google Drive
+- Pretrained Model: AlexNet
+- Dataset: CIFAR-100
+- Fine-Tuned for 100 Classes: Fruits, vegetables, animals, food items, etc.
+- Model Downloaded from Google Drive
 
 🎯 How It Works
 
-Upload an image.
-
-The image is preprocessed and classified.
-
-The model returns top-5 predictions with probabilities.
-
-Cohere AI generates a detailed description of the classified object.
+1. Upload an image.
+2. The image is preprocessed and classified.
+3. The model returns top-5 predictions with probabilities.
+4. Cohere AI generates a detailed description of the classified object.
 
 📜 License
 This project is open-source under the MIT License.
